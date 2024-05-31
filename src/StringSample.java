@@ -18,26 +18,27 @@ public class StringSample {
 
     // subString
     // startIndex부터 endIndex 전까지 문자열을 반환
-    String sub = "WEEEE ASKE ;DN";
-    System.out.println(sub.substring(0, 5));
-    System.out.println(
-        sub.substring(0, 3) + sub.substring(8, 10) + sub.substring(13, 14) + sub.substring(12, 13));
+    //    String sub = "WEEEE ASKE ;DN";
+    //    System.out.println(sub.substring(0, 5));
+    //    System.out.println(
+    //        sub.substring(0, 3) + sub.substring(8, 10) + sub.substring(13, 14) + sub.substring(12,
+    // 13));
 
     // split
     // 정규식을 사용해 문자열을 나눔
-    String split = "a:b:c:d";
-    String[] result = split.split(":");
-
-    // format
-    // 문자열을 지정된 형식으로 변환
-    String name0 = "Tim";
-    int age0 = 30;
-
-    String name1 = "Anna";
-    int age1 = 45;
-
-    String.format("%s의 나이는 %d세입니다", name0, age0);
-    String.format("%s의 나이는 %d세입니다", name1, age1);
+    //    String split = "a:b:c:d";
+    //    String[] result = split.split(":");
+    //
+    //    // format
+    //    // 문자열을 지정된 형식으로 변환
+    //    String name0 = "Tim";
+    //    int age0 = 30;
+    //
+    //    String name1 = "Anna";
+    //    int age1 = 45;
+    //
+    //    String.format("%s의 나이는 %d세입니다", name0, age0);
+    //    String.format("%s의 나이는 %d세입니다", name1, age1);
 
     // StringBuffer, StringBuilder
     // 문자열을 추가/수정할 때 사용
@@ -45,5 +46,16 @@ public class StringSample {
     // StringBuffer, StringBuilder는 새로운 문자열을 생성하지 않고 저장함
     // StringBuffer는 thread-safe
 
+    StringBuilder sb = new StringBuilder();
+    sb.append("Hello ");
+    sb.append("java");
+    sb.append("world");
+    System.out.println(sb);
+
+    StringBuffer sbf = new StringBuffer();
+    sbf.append("Hello ");
+    sbf.append("java");
+    sbf.append("world");
+    System.out.println(sbf);
   }
 }
