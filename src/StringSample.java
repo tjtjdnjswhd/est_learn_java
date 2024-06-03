@@ -13,8 +13,8 @@ public class StringSample {
     //
     //    문자열 교체
     //    replaceAll은 정규식을 사용할 수 있음
-    //    String replace = "Say my name";
-    //    System.out.println(replace.replaceAll("my", "your"));
+    //        String replace = "Say my name";
+    //        System.out.println(replace.replaceAll("my", "your"));
 
     // subString
     // startIndex부터 endIndex 전까지 문자열을 반환
@@ -46,16 +46,32 @@ public class StringSample {
     // StringBuffer, StringBuilder는 새로운 문자열을 생성하지 않고 저장함
     // StringBuffer는 thread-safe
 
-    StringBuilder sb = new StringBuilder();
-    sb.append("Hello ");
-    sb.append("java");
-    sb.append("world");
-    System.out.println(sb);
+    //    StringBuilder sb = new StringBuilder();
+    //    sb.append("Hello ");
+    //    sb.append("java");
+    //    sb.append("world");
+    //    System.out.println(sb);
+    //
+    //    StringBuffer sbf = new StringBuffer();
+    //    sbf.append("Hello ");
+    //    sbf.append("java");
+    //    sbf.append("world");
+    //    System.out.println(sbf);
 
-    StringBuffer sbf = new StringBuffer();
-    sbf.append("Hello ");
-    sbf.append("java");
-    sbf.append("world");
-    System.out.println(sbf);
+    // String Pool
+    // 상수로 선언된 문자열은 String Pool에 저장됨
+    // 생성자로 생성된 문자열은 새로 Heap에 저장됨
+    String str1 = "Hello";
+    String str2 = "Hello";
+    String str3 = new String("Hello");
+
+    // true
+    // 같은 주소
+    System.out.println(str1 == str2);
+    // false
+    // 다른 주소
+    System.out.println(str1 == str3);
+
+
   }
 }
